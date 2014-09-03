@@ -17,7 +17,8 @@
 			  }
 	})
   .config(function($stateProvider){
-      $stateProvider.state("about", {
+    $stateProvider
+    .state("about", {
       url:'/about',
       views: {
         "main": {
@@ -26,6 +27,13 @@
         }
       }
   })
+  .state("error", {
+    views: {
+      "main": {
+        templateUrl:'/assets/pages/error.php'        
+      }
+    }
+})
   .state("home", {
     url:'/',
     views: {

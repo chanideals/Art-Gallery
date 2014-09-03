@@ -1,10 +1,5 @@
 angular.module('welcomePageApp.LoginView', [])
-.config(['$httpProvider', function($httpProvider) {
-
-        $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-
-    }])
-.controller('LoginCtrl', function ($scope, $http) {
+  .controller('LoginCtrl', function ($scope, $http, $state, $rootScope) {
     $scope.message = "Login";
     $scope.url = '/welcome/about';
     $scope.form = {
@@ -14,27 +9,20 @@ angular.module('welcomePageApp.LoginView', [])
     }
    var oriPerson = angular.copy($scope.form);
     $scope.signup = function ($event) {
-      console.log($event);
-
-        $.ajax({
-            url: 'welcome/login',
-            data: $scope.form,
-            method: 'POST'
-        }).success(function (data) {
-            console.log(data);
-         $scope.form = angular.copy(oriPerson);
-         $scope.loginForm.$setPristine();
-        });
-
-
-        $http.post('welcome/login', $scope.form)
+        var config = {
+          headers: {'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-Requested-With':'XMLHttpRequest' }
+        }
+        $http.post('welcome/login', $.param($scope.form), config)
         .success(function (data, status, headers, config)
         {
-          console.log(data);
+          $rootScope.message = status;
+          $state.go('error');
         })
         .error(function (data, status, headers, config)
         {
-          console.log(data);
+          $rootScope.message = status;
+          $state.go('error');
         });
 
     }
@@ -43,4 +31,4 @@ angular.module('welcomePageApp.LoginView', [])
      restrict: 'E',
      template: '<div>Hello Chan</div>'
    };
- })
+ });
