@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="NavCtrl">
+<div class="navbar navbar navbar-fixed-top" role="navigation" data-ng-controller="NavCtrl">
       <div class="container-fluid" >
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -23,6 +23,6 @@
       </div>
     </div>
 
-      <div  class="container-fluid" data-ng-controller="MainCtrl">          
-        	<div ui-view="main" class="slide" ></div>        	
+      <div  class="container-fluid" data-ng-controller="MainCtrl">
+        	<div ui-view="main" class="slide" ></div>
       </div>

@@ -7,7 +7,7 @@
       <div class="carousel-inner">
         <div class="item slides {{img.class}}" data-ng-repeat="img in images" >
           <div class="container">
-            <img src="{{img.src}}" alt="{{img.alt}}"/>
+            <img data-ng-src="{{img.src}}" alt="{{img.alt}}"/>
             <div class="carousel-caption">
               {{img.caption}}
             </div>

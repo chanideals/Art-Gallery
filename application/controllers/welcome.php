@@ -4,6 +4,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->helper('url');
 		$data = array();
 		$data['title'] = 'chan ideals';
 		$this->load->view('include/header',$data);

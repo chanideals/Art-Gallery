@@ -5,6 +5,6 @@
 	        </li>
           </ul>
 </div>
-<div ui-view="dash-content" class="slide col-md-5">
+<div ui-view="dash-content" class="slide col-sm-9 col-md-10">
 
 </div>

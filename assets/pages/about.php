@@ -1,3 +1,3 @@
-<div class="root">
-  <div class="lead">{{message}}</div>
+<div class="root jumbotron">
+  <div class="lead center">{{message}}</div>
 </div>
