@@ -18,5 +18,10 @@
 		<script src="<?php echo base_url().'assets/js/app/mainView.js' ?>"></script>
 		<script src="<?php echo base_url().'assets/js/app/navView.js' ?>"></script>
 		<script src="<?php echo base_url().'assets/js/app/artView.js' ?>"></script>
+		<script type="text/ng-template" id="errorTemplate.html">
+			<div class="root jumbotron">
+				<div class="lead center">{{message}}</div>
+			</div>
+		</script>
 	</body> <!-- end body -->
 </html>

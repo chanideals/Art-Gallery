@@ -30,7 +30,7 @@
   .state("error", {
     views: {
       "main": {
-        templateUrl:'/assets/pages/error.php'        
+        templateUrl:'errorTemplate.html'        
       }
     }
 })

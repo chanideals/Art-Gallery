@@ -16,12 +16,11 @@ angular.module('welcomePageApp.LoginView', [])
         $http.post('welcome/login', $.param($scope.form), config)
         .success(function (data, status, headers, config)
         {
-          $rootScope.message = status;
-          $state.go('error');
+          $state.go('home');
         })
         .error(function (data, status, headers, config)
         {
-          $rootScope.message = status;
+          $rootScope.message = "Error: Cannot reach the server";
           $state.go('error');
         });
 

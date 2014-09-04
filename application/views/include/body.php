@@ -22,7 +22,6 @@
         </div>
       </div>
     </div>
-
       <div  class="container-fluid" data-ng-controller="MainCtrl">
         	<div ui-view="main" class="slide" ></div>
       </div>
