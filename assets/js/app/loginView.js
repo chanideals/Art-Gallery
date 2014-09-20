@@ -25,9 +25,9 @@ angular.module('welcomePageApp.LoginView', [])
         });
 
     }
-}).directive('myCustomer', function() {
+}).directive('loginMessage', function() {
    return {
      restrict: 'E',
-     template: '<div>Hello Chan</div>'
+     template: '<div>Please Register before login</div>'
    };
  });

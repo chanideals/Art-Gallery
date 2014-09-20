@@ -1,0 +1,123 @@
+@import 'var';
+@import 'art';
+
+
+@mixin ease($time)
+{
+  -webkit-transition: -webkit-transform $time ease-in, opacity $time ease-in;
+     -moz-transition: -moz-transform $time ease-in, opacity $time ease-in;
+       -o-transition: -o-transform $time ease-in, opacity $time ease-in;
+          transition: transform $time ease-in, opacity $time ease-in;
+}
+
+@mixin scale($size, $opacity)
+{
+  -webkit-transform: scaleX($size);
+       -o-transform: scaleX($size);
+          transform: scaleX($size);
+  opacity: $opacity;
+}
+
+
+body{
+    background-color:$color;
+    padding-top: $padding-top;
+    width : $width;
+}
+
+.navbar-brand{
+	font-size: $font-size;
+}
+
+.navbar-header
+{
+	font-size:$font-size;
+	color: $font-color;
+}
+.container
+{
+  width : $width;
+}
+.carousel {
+  height: $carousel_height;
+  img{
+    width:$width;
+  }
+
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: $width;
+  /* Set the fixed height of the footer here */
+  height: $footer-height;
+  background-color: $color * .9;
+}
+
+.slide.ng-leave {
+  position: relative;
+}
+
+.slide.ng-enter {
+  position: absolute;
+  @include ease(0.3s);
+  @include scale(0.0001,0);
+}
+
+.slide.ng-leave {
+  @include ease(0.3s);
+}
+
+.slide.ng-leave.ng-leave-active {
+  @include scale(0.0001,0);
+}
+.slide, .slide.ng-enter.ng-enter-active {
+    @include scale(1,1);
+}
+/*make the pointer a cursor*/
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer;
+}
+
+.column
+{
+  border:5px;
+  height:200px;
+  margin: 5px 0;
+  text-align:center;
+
+  .left
+  {
+    margin: 5px 0;
+  }
+
+  .right
+  {
+     margin: 5px 0;
+  }
+}
+
+//styles for login form
+#loginForm div
+{
+    margin: 5px 5px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar-brand{
+	    font-size: $small_font_size;
+    }
+
+    .carousel
+    {
+        height: $carousel_small_height;
+
+        .item {
+            height: $carousel_small_height;
+        }
+    }
+
+}

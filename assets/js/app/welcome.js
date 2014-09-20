@@ -22,7 +22,7 @@
       url:'/about',
       views: {
         "main": {
-          templateUrl:'/assets/pages/about.php',
+          templateUrl:'aboutTemplate.html',
   				controller: 'AboutCtrl'
         }
       }
@@ -30,7 +30,7 @@
   .state("error", {
     views: {
       "main": {
-        templateUrl:'errorTemplate.html'        
+        templateUrl:'errorTemplate.html'
       }
     }
 })
@@ -38,7 +38,7 @@
     url:'/',
     views: {
       "main": {
-        templateUrl: "/assets/pages/home.php",
+        templateUrl: "homeTemplate.html",
         controller: 'HomeCtrl'
       }
     }
@@ -47,7 +47,7 @@
     url:'/dashboard',
     views: {
       "main": {
-        templateUrl: "/assets/pages/dashboard.php",
+        templateUrl: "dashboardTemplate.html",
         controller: 'DashboardCtrl'
       },
       "dash-content@dashboard": {
@@ -83,7 +83,7 @@
   url:'/art',
   views: {
     "dash-content": {
-      templateUrl: "/assets/pages/artPage.php",
+      templateUrl: "artTemplate.html",
       controller: 'ArtCtrl'
     }
   }
@@ -92,7 +92,7 @@
     url:'/login',
     views: {
       "main": {
-        templateUrl: "/assets/pages/login.php",
+        templateUrl: "loginTemplate.html",
         controller: 'LoginCtrl'
       }
     }

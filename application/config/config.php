@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://chanideals.local';
+$config['base_url']	= 'http://www.ci.com';
 
 /*
 |--------------------------------------------------------------------------

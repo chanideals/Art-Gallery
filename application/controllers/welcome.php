@@ -9,6 +9,12 @@ class Welcome extends CI_Controller {
 		$data['title'] = 'chan ideals';
 		$this->load->view('include/header',$data);
 		$this->load->view('include/body');
+		$this->load->view('partials/about');
+		$this->load->view('partials/artPage');
+		$this->load->view('partials/dashboard');
+		$this->load->view('partials/error');
+		$this->load->view('partials/home');
+		$this->load->view('partials/login');
 		$this->load->view('include/footer');
 	}
 

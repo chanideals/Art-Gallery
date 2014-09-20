@@ -1,3 +1,4 @@
+<script type="text/ng-template" id="homeTemplate.html">
 <div class="container-fluid">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -23,3 +24,4 @@
       <div class="col-md-2 col-sm-2 column right">Chan Ideals</div>
     </div>
 </div>
+</script>

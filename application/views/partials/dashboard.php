@@ -1,3 +1,4 @@
+<script type="text/ng-template" id="dashboardTemplate.html">
 <div class="col-sm-3 col-md-2 sidebar"  >
         <ul class="nav nav-sidebar">
             <li data-ng-repeat="link in links">
@@ -8,3 +9,4 @@
 <div ui-view="dash-content" class="slide col-sm-9 col-md-10">
 
 </div>
+</script>

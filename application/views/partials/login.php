@@ -1,3 +1,4 @@
+<script type="text/ng-template" id="loginTemplate.html">
 <div class="container">
     <div class="col-md-6 col-md-offset-3">
         <form id="loginForm" name="loginForm" novalidate>
@@ -35,5 +36,6 @@
              </div>
         </form>
     </div>
-    <my-customer></my-customer>
+    <login-message></login-message>
 </div>
+</script>
