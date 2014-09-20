@@ -1,4 +1,4 @@
 Art-Gallery
 ===========
 
-Gallery for selling arts.
+Gallery for selling arts. New User
